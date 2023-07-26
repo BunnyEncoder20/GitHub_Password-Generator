@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-.body  {
+body  {
     background-color: black;
 }
 
@@ -14,7 +14,7 @@ h1{
     /* transform: translateY(-50%); */
 
     color: #7E7C89;
-    font-family: monospace;
+    font-family: 'Space Mono', monospace;
     font-size: 19px;
     font-style: normal;
     font-weight: 700;
@@ -23,7 +23,6 @@ h1{
 }
 
 #main{
-    background: #24232B;
     color: white;
 
     position: absolute;
@@ -33,9 +32,86 @@ h1{
     height: 469px;
     flex-shrink: 0;
 }
-#passwordDisplay{
 
+#passwordcontainer{
+    position: relative;
+    display: inline-block;
 }
-#copy2clipboard{
-    background: white;
+
+#passwordDisplay{
+    width: 441px;
+    height: 70px;
+    background: #24232B;
+    
+    padding: 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-family: 'Space Mono', monospace;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+button#copy2clipboard {
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    transform: translateY(-50%);
+    padding: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+button#copy2clipboard ion-icon {
+    font-size: 28px;
+    color: #A6FEB0;
+}
+
+#parameters{
+    background: #24232B;
+    width: 440px;
+    height: 469px;
+
+    position: relative;
+    top: 5%;
+    padding: 30px 30px;
+}
+#sliderValue{
+    color: #A4FFAF;
+    font-family: 'Space Mono', monospace;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.232px;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 430px;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    background: black; 
+    height: 0.5rem;
+    width: 500px;
+    border-radius: 20px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -12px; /* Centers thumb on the track */
+    background-color: #ffffff; /* White background color */
+    height: 2rem;
+    width: 2rem; /* Set the width to create a circle (same as height) */
+    border-radius: 50%; /* Create a circular shape */
+}
+#lengthcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
