@@ -122,15 +122,43 @@ input[type="range"]::-webkit-slider-thumb {
     display: none;
 }
 
-input[type="checkbox"] {
+/* input[type="checkbox"] {
     font-size: 16px;
     border: 2px solid #FFF;
     background: #A4FFAF;
 }
+input[type="checkbox"]:checked {
+    background-color: #A4FFAF; 
+} 
+*/
+#checkboxescontainer {
+    font-size: 16px;
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+    line-height: 1.1;
+}
+input[type="checkbox"] {
+    appearance: none;
+    background-color: transparent;
+    margin: 0px 10px 0px 0px;
+    font: inherit;
+    color: white;
+    width: 17px;
+    height: 17px;
+    border: 0.15em solid white;
+    border-radius: 0.15em;
+    transform: translateY(0.1em);
+}
+input[type="checkbox"]:checked {
+    background-color: #A4FFAF; /* Change the background color when checked */
+    border-color: #A4FFAF; /* Change the border color when checked */
+    box-shadow: none; /* Remove the box-shadow for checked checkboxes */
+}
+
 label {
     display: inline-block;
     position: relative;
-    padding: 5px 0px; /* Spacing between the label and the custom checkbox */
+    padding: 5px 10px; /* Spacing between the label and the custom checkbox */
     cursor: pointer;
 
     font-size: 19px;
@@ -172,7 +200,8 @@ label {
     height: 25px;
     width: 10px;
     margin: 5px;
-    background: white;
+    background: transparent;
+    border: 1px solid white;
 }
 
 
@@ -186,4 +215,5 @@ label {
     font-weight: 600;
     line-height: normal;
     letter-spacing: 1.339px;
+    cursor: pointer;
 }
