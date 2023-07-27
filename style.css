@@ -42,6 +42,7 @@ h1{
     width: 441px;
     height: 70px;
     background: #24232B;
+    color: white;
     
     padding: 10px 30px;
     border: 1px solid #ccc;
@@ -52,6 +53,17 @@ h1{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+#notificationPopup {
+    display: none;
+    color: #A6FEB0;
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    padding-left:30%;
 }
 
 button#copy2clipboard {
@@ -67,6 +79,9 @@ button#copy2clipboard {
 button#copy2clipboard ion-icon {
     font-size: 28px;
     color: #A6FEB0;
+    position: absolute;
+    top: -7px;
+    right: 3px;
 }
 
 #parameters{

@@ -34,3 +34,65 @@ function updateRectanglesColor() {
         }
     });
 }
+
+function generatePassword() {
+    const length = document.getElementById('length').value ;
+    const includeUppercaseLetters = document.getElementById('uppercaseLetters').checked ;
+    const includeLowercaseLetters = document.getElementById('lowercaseLetters').checked ;
+    const includeNumbers = document.getElementById('numbers').checked ;
+    const includeSymbols = document.getElementById('symbols').checked ;
+    
+    const uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVQWXYZ' ;
+    const lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz' ;
+    const numbers = '1234567890' ;
+    const symbols = '!@#$%^&*()-_' ;
+
+    let passwordCharacters = '';
+
+    if (includeUppercaseLetters)
+        passwordCharacters += uppercaseLetters ;
+    if (includeLowercaseLetters)
+        passwordCharacters += lowercaseLetters ;
+    if (includeNumbers) 
+        passwordCharacters += numbers ;
+    if (includeSymbols) 
+        passwordCharacters += symbols ;
+    
+    let password = '' ;
+    for(let i=0; i<length; i++) {
+        password += getRandomCharacter(passwordCharacters) ;
+    }
+
+    document.getElementById('passwordDisplay').value = password ;
+}
+
+// Function to generate a random character from a given string
+function getRandomCharacter(characters) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    return characters[randomIndex];
+}
+
+// fucniton to copy to clipboard 
+function copy2clipboard() {
+    const passwordInput = document.getElementById('passwordDisplay');
+    passwordInput.select();
+    passwordInput.setSelectionRange(0, 99999); // For mobile devices
+
+    document.execCommand('copy');
+
+    // Remove the text selection from the input field
+    window.getSelection().removeAllRanges();
+
+    // Show the notification popup
+    const notificationPopup = document.getElementById('notificationPopup');
+    notificationPopup.style.display = 'block';
+
+    // Hide the notification popup after 2 seconds
+    setTimeout(() => {
+        notificationPopup.style.display = 'none';
+    }, 2000);
+}
+
+// Adding event listerners for the buttons 
+document.getElementById('generatebtn').addEventListener('click',generatePassword) ;
+document.getElementById('copy2clipboard').addEventListener('click',copy2clipboard) ;
