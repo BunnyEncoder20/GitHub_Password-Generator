@@ -9,7 +9,7 @@ body  {
 
 h1{
     position: absolute;
-    top: 15%;
+    top: 3%;
     left: 45%;
     /* transform: translateY(-50%); */
 
@@ -26,7 +26,7 @@ h1{
     color: white;
 
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 35%;
     width: 480px;
     height: 469px;
@@ -94,6 +94,8 @@ input[type="range"] {
     cursor: pointer;
     width: 430px;
     padding-bottom: 20px; 
+
+    
 }
 input[type="range"]::-webkit-slider-runnable-track {
     background: black; 
@@ -101,7 +103,6 @@ input[type="range"]::-webkit-slider-runnable-track {
     width: 500px;
     border-radius: 20px;
 }
-
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
@@ -110,7 +111,13 @@ input[type="range"]::-webkit-slider-thumb {
     height: 2rem;
     width: 2rem; /* Set the width to create a circle (same as height) */
     border-radius: 50%; /* Create a circular shape */
+
+    /* box-shadow:#A4FFAF;  */
+    /* box-shadow: -407px 0 0 400px #A4FFAF; */
 }
+
+
+
 #lengthcontainer{
     display: flex;
     flex-direction: row;
