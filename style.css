@@ -55,7 +55,7 @@ h1{
     line-height: normal;
 }
 #myPopup {
-    /* visibility: hidden; */
+    visibility: hidden;
     width: 120px;
     background-color: #555;
     color: #A4FFAF;
