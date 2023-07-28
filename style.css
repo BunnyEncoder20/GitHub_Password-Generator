@@ -55,7 +55,7 @@ h1{
     line-height: normal;
 }
 #myPopup {
-    visibility: hidden;
+    /* visibility: hidden; */
     width: 120px;
     background-color: #555;
     color: #A4FFAF;
@@ -277,4 +277,58 @@ label {
     line-height: normal;
     letter-spacing: 1.339px;
     cursor: pointer;
+}
+
+
+/* Trying to make the site responsive */
+/* Mobile iphone SE (375x667) */
+@media (max-width: 450px) {
+    h1 {
+        font-size: 16px;
+        left: 25%;
+    }
+
+    #main {
+        left: 5%;
+        width: 90%;
+    }
+
+    #passwordDisplay {
+        width: 79vw;
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+
+    span#copy2clipboard ion-icon  {
+        position: absolute;
+        right: 4vw;
+    }
+
+    #parameters {
+        width: 85vw;
+        height: 68vh;
+        padding: 10px;
+    }
+
+    #checkboxescontainer label{
+        font-size: 17px;
+    }
+
+    input[type="range"] {
+        width: 100%;
+    }
+
+    #strengthcontainer {
+        width: 83vw;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #generatebtn {
+        width: 100%;
+    }
+
+    #myPopup {
+        left: 97%;
+    }
 }
