@@ -83,14 +83,20 @@ function copy2clipboard() {
     // Remove the text selection from the input field
     window.getSelection().removeAllRanges();
 
-    // Show the notification popup
-    const notificationPopup = document.getElementById('notificationPopup');
-    notificationPopup.style.display = 'block';
+    // // Show the notification popup
+    // const notificationPopup = document.getElementById('notificationPopup');
+    // notificationPopup.style.display = 'block';
 
-    // Hide the notification popup after 2 seconds
-    setTimeout(() => {
-        notificationPopup.style.display = 'none';
-    }, 2000);
+    // // Hide the notification popup after 2 seconds
+    // setTimeout(() => {
+    //     notificationPopup.style.display = 'none';
+    // }, 2000);
+    const popup = document.getElementById('myPopup') ;
+    popup.style.visibility  = 'visible' ;
+
+    setTimeout( () => {
+        popup.style.visibility = 'hidden' ;
+    }, 2000)
 }
 
 // Adding event listerners for the buttons 
